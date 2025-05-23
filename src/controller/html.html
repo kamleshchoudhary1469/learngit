@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>POST and Open New Page</title>
+</head>
+
+<body>
+
+    <form id="postForm">
+        <label for="userdetails">User Details </label>
+        <textarea id="userdetails" name="userdetails" required></textarea><br><br>
+
+        <label for="service">Service</label>
+        <input type="text" id="service" name="service"><br><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        document.getElementById('postForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = 'https://172.22.33.53/ifms/generate-token/pensionlogin';
+            form.target = '_blank'; // <-- open in a new tab
+
+            // create userdetails input
+            const userdetailsInput = document.createElement('input');
+            userdetailsInput.type = 'hidden';
+            userdetailsInput.name = 'userdetails';
+            userdetailsInput.value = document.getElementById('userdetails').value;
+            form.appendChild(userdetailsInput);
+
+            // create service input
+            const serviceInput = document.createElement('input');
+            serviceInput.type = 'hidden';
+            serviceInput.name = 'service';
+            serviceInput.value = document.getElementById('service').value;
+            form.appendChild(serviceInput);
+
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form); // clean up
+        });
+    </script>
+</body>
+
+</html>

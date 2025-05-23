@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "rootDir": "./src",
+    "outDir": "4014",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "useUnknownInCatchVariables": false,
+    "strict": true,
+    "skipLibCheck": true,
+    "lib": ["es5", "es6", "dom", "dom.iterable"]
+  },
+  "files": ["./src/common/interface/jwt.ts"],
+  "lib": ["es2015"],
+  "exclude": ["node_modules"],
+  "include": ["./src/**/*.ts", "src/controller/ITMS-API/generateToken.ts"]
+}

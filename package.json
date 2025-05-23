@@ -1,0 +1,55 @@
+{
+	"name": "auth",
+	"version": "1.0.0",
+	"description": "taxcpc auth",
+	"main": "4014/index.js",
+	"type": "commonjs",
+	"scripts": {
+		"build": "rimraf 4014 && tsc",
+		"cmp": "rimraf 4014 && tsc -w",
+		"start": "nodemon src/index.ts"
+	},
+	"keywords": [
+		"auth"
+	],
+	"author": "VISHAL KOTHEKAR",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/bcryptjs": "^2.4.2",
+		"@types/cors": "^2.8.12",
+		"@types/crypto-js": "^4.1.1",
+		"@types/express": "^4.17.14",
+		"@types/express-fileupload": "^1.4.1",
+		"@types/jsonwebtoken": "^8.5.9",
+		"@types/node": "^18.8.3",
+		"@types/node-schedule": "^2.1.0",
+		"@types/oracledb": "^5.2.3",
+		"@types/ssh2-sftp-client": "^9.0.0",
+		"@types/uuid": "^8.3.4",
+		"@typescript-eslint/eslint-plugin": "^5.39.0",
+		"@typescript-eslint/parser": "^5.39.0",
+		"eslint": "^8.25.0",
+		"nodemon": "^2.0.20",
+		"rimraf": "^3.0.2",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.8.4"
+	},
+	"dependencies": {
+		"axios": "^1.4.0",
+		"bcryptjs": "^2.4.3",
+		"cors": "^2.8.5",
+		"crypto-js": "^4.1.1",
+		"dotenv": "^16.0.3",
+		"encrypt-rsa": "^2.1.5",
+		"express": "^4.18.2",
+		"express-async-errors": "^3.1.1",
+		"express-fileupload": "^1.4.0",
+		"express-validator": "^6.14.2",
+		"joi": "^17.6.3",
+		"jsonwebtoken": "^8.5.1",
+		"node-fetch": "^3.3.1",
+		"node-schedule": "^2.1.1",
+		"oracledb": "^5.5.0",
+		"uuid": "^9.0.0"
+	}
+}
