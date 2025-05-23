@@ -12,7 +12,7 @@ import { AWS_BUCKETNAME, CLOUD_INFRA_AT, FORM_SIXTEEN, PUBLIC_BASE_PATH_F16 } fr
 
 // const rootPath = `public/`;
 const rootPath = ``;
-const downloadPath = `public/download`;
+const downloadPath = `public/download/folder`;
 
 const promiseWrapper = (callback = ({ reject }: any): any => reject(false)) => {
     return new Promise<any>(async (resolve, reject) => {
